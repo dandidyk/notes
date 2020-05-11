@@ -1,0 +1,39 @@
+.form {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.input {
+  border: none;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1em;
+  padding: 10px;
+  margin-bottom: 16px;
+}
+
+.textarea {
+  border: none;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1em;
+  padding: 10px;
+  margin-bottom: 16px;
+}
+
+.button {
+  border: none;
+  border-radius: 6px;
+  background-color: #ffa100;
+  padding: 8px 12px;
+  color: #fff;
+  outline: none;
+  cursor: pointer;
+}
+
+.error {
+  color: red;
+}

@@ -1,26 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from 'react'
+import s from './style.module.scss'
+import NotesPage from './components/NotesPage'
+import LoginPage from './components/LoginPage'
+
+import { ProtectedRoute } from './ProtectedRoute'
+
+import { Route, Switch } from 'react-router-dom'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={s.app}>
+      <div className={s.app__wrap}>
+        <h1 className={s.app__title}>Notes</h1>
+        <Switch>
+          <Route exact path='/login' component={LoginPage} />
+          <ProtectedRoute exact path='/' component={NotesPage} />
+        </Switch>
+      </div>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
